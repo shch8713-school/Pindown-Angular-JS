@@ -18,7 +18,7 @@ import { MarkerService } from './services/marker.service';
     AngularFireModule.initializeApp(environment.firebase, 'angular-gmap'),
     AngularFirestoreModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCdHb_vSY0w0bzeOUXgDsOexiZl1K9PAhA'
+      apiKey: 'Your API Key'
     })
   ],
   providers: [MarkerService],
