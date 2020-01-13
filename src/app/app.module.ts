@@ -1,18 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AgmCoreModule } from '@agm/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { environment } from '../environments/environment';
+import { AngularFireModule } from 'angularfire2';
+import {AngularFirestoreModule } from 'angularfire2/firestore';
+
 import { AppComponent } from './app.component';
+import { PinsComponent } from './components/pins/pins.component';
+
+import { MarkerService } from './services/marker.service';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, PinsComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AngularFireModule.initializeApp(environment.firebase, 'angular-gmap'),
+    AngularFirestoreModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCdHb_vSY0w0bzeOUXgDsOexiZl1K9PAhA'
+    })
   ],
-  providers: [],
+  providers: [MarkerService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

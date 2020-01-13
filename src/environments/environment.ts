@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyC3wCUAje4nk_khXZ83QHtMGE5yTpDWyhU",
+    authDomain: "pindown-web-angular-js.firebaseapp.com",
+    databaseURL: "https://pindown-web-angular-js.firebaseio.com",
+    projectId: "pindown-web-angular-js",
+    storageBucket: "pindown-web-angular-js.appspot.com",
+    messagingSenderId: "1014175939895",
+    appId: "1:1014175939895:web:31c30976c3ba155e722eb2",
+    measurementId: "G-LZJBR6H1VK"
+  }
 };
 
 /*

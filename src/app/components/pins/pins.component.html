@@ -1,0 +1,10 @@
+<div *ngIf="pins?.length > 0;else noPins">
+    <ul *ngFor="let marker of pins" class="collection">
+        <li class="collection-marker"><strong>{{ marker.title }}: </strong> {{ marker.description }}</li>
+    </ul>
+</div>
+
+<ng-template #noPins>
+    <hr>
+    <h5>There are no pins to list</h5>
+</ng-template>
